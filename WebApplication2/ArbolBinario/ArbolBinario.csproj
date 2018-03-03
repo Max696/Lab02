@@ -39,6 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArbolBinarioBusqueda.cs" />
+    <Compile Include="Delegados.cs" />
+    <Compile Include="IArbolBinario.cs" />
+    <Compile Include="Nodo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

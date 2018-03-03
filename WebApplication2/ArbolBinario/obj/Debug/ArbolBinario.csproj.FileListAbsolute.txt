@@ -1,0 +1,5 @@
+D:\Lab02\WebApplication2\ArbolBinario\bin\Debug\ArbolBinario.dll
+D:\Lab02\WebApplication2\ArbolBinario\bin\Debug\ArbolBinario.pdb
+D:\Lab02\WebApplication2\ArbolBinario\obj\Debug\ArbolBinario.csprojResolveAssemblyReference.cache
+D:\Lab02\WebApplication2\ArbolBinario\obj\Debug\ArbolBinario.dll
+D:\Lab02\WebApplication2\ArbolBinario\obj\Debug\ArbolBinario.pdb
