@@ -36,31 +36,68 @@ namespace TDA_NoLineales.Clases
         }
         public void Eliminar(T _key)
         {
-            DeleteWithNode(_key, _raiz);
+            DeleteWithNodea(_key, _raiz);
         }
-        public void DeleteWithNode(T _key, Nodo<T> Actual)
+        public Nodo<T> Max(Nodo<T> n)
         {
-            if (Actual==null)
+            if (n == null)
             {
-                return;
-            }
-            if (_key.CompareTo(Actual.value)<0)
-            {
-                DeleteWithNode(_key, Actual.left);
-            }
-            else if (_key.CompareTo(Actual.value)>0)
-            {
-                DeleteWithNode(_key, Actual.right);
-            }
-            else if (Actual.left != null && Actual.right!=null)
-            {
-                Actual.value = Min(Actual.right).value;
-                DeleteWithNode(Actual.value, Actual.right);
+                return null;
+
             }
             else
             {
-                Actual = (Actual.left != null) ? Actual.left : Actual.right;
+                while (n.right != null)
+                {
+                    n = n.right;
+                }
+                return n;
             }
+        }
+        public Nodo<T> DeleteWithNodea(T _key, Nodo<T> pivot)
+        {
+            if (pivot==null)
+            {
+                return null;
+            }
+            if (_key.CompareTo(pivot.value)<0)
+            {
+               pivot.left= DeleteWithNodea(_key, pivot.left);
+            }
+            else if (_key.CompareTo(pivot.value)>0)
+            {
+                pivot.right=DeleteWithNodea(_key, pivot.right);
+            }
+          
+            else
+            {
+                if( pivot.right==null && pivot.left==null)
+                {
+                    pivot = null;
+                    return pivot;
+                }
+                else if (pivot.right == null)
+                {
+                    Nodo<T> aux = pivot;
+                    pivot = pivot.left;
+                    aux = null;
+                }
+                else if ( pivot.right==null)
+                {
+                    Nodo<T> aux = pivot;
+                    pivot = pivot.right;
+                    aux = null;
+                }
+                else
+                {
+                    Nodo<T> aux = Max(pivot.left);
+                    pivot.value = aux.value;
+                    pivot.right = DeleteWithNodea(_key, pivot.left);
+                }
+            }
+            return pivot;
+
+        
         }
 
         public void EnOrden(RecorridoDelegate<T> _recorrido)
