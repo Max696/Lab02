@@ -116,7 +116,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ArbolBinarioBusqueda.cs" />
+    <Compile Include="Models\Delegados.cs" />
+    <Compile Include="Models\IArbolBinario.cs" />
     <Compile Include="Models\JsonConvert.cs" />
+    <Compile Include="Models\Nodo.cs" />
     <Compile Include="Models\Pais.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
