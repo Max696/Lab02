@@ -1,0 +1,33 @@
+﻿@model WebApplication2.Models.Pais
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Carga de árbol</title>
+</head>
+
+<body>
+    @using (Html.BeginForm("Create", "Pais", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div>
+            JSON file <input type="file" name="jsonFile" />
+            <br />
+            <input type="submit" value="Import" />
+        </div>
+    }
+</body>
+
+</html>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

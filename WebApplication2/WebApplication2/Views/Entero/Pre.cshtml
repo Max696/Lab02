@@ -1,0 +1,29 @@
+﻿@model IEnumerable<WebApplication2.Models.Entero>
+
+@{
+    ViewBag.Title = "Pre";
+}
+
+<h2>Pre</h2>
+
+<p>
+    @Html.ActionLink("Back to list ", "Index");
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.valor);
+        </th>
+    </tr>
+
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(show => i.valor);
+            </td>
+
+        </tr>
+    }
+</table>
+

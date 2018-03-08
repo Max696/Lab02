@@ -47,5 +47,88 @@ C:\ED\Github\Lab02\WebApplication2\WebApplication2\bin\System.Web.WebPages.Deplo
 C:\ED\Github\Lab02\WebApplication2\WebApplication2\bin\System.Web.WebPages.Razor.xml
 C:\ED\Github\Lab02\WebApplication2\WebApplication2\bin\Antlr3.Runtime.pdb
 C:\ED\Github\Lab02\WebApplication2\WebApplication2\bin\Newtonsoft.Json.xml
+C:\ED\Github\Lab02\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
 C:\ED\Github\Lab02\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
 C:\ED\Github\Lab02\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb
+D:\Lab02\WebApplication2\WebApplication2\bin\WebApplication2.dll.config
+D:\Lab02\WebApplication2\WebApplication2\bin\WebApplication2.dll
+D:\Lab02\WebApplication2\WebApplication2\bin\WebApplication2.pdb
+D:\Lab02\WebApplication2\WebApplication2\bin\Antlr3.Runtime.dll
+D:\Lab02\WebApplication2\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
+D:\Lab02\WebApplication2\WebApplication2\bin\Newtonsoft.Json.dll
+D:\Lab02\WebApplication2\WebApplication2\bin\System.Web.Helpers.dll
+D:\Lab02\WebApplication2\WebApplication2\bin\System.Web.Mvc.dll
+D:\Lab02\WebApplication2\WebApplication2\bin\System.Web.Optimization.dll
+D:\Lab02\WebApplication2\WebApplication2\bin\System.Web.Razor.dll
+D:\Lab02\WebApplication2\WebApplication2\bin\System.Web.WebPages.Deployment.dll
+D:\Lab02\WebApplication2\WebApplication2\bin\System.Web.WebPages.dll
+D:\Lab02\WebApplication2\WebApplication2\bin\System.Web.WebPages.Razor.dll
+D:\Lab02\WebApplication2\WebApplication2\bin\WebGrease.dll
+D:\Lab02\WebApplication2\WebApplication2\bin\System.Web.Helpers.xml
+D:\Lab02\WebApplication2\WebApplication2\bin\System.Web.Mvc.xml
+D:\Lab02\WebApplication2\WebApplication2\bin\System.Web.Optimization.xml
+D:\Lab02\WebApplication2\WebApplication2\bin\System.Web.Razor.xml
+D:\Lab02\WebApplication2\WebApplication2\bin\System.Web.WebPages.xml
+D:\Lab02\WebApplication2\WebApplication2\bin\System.Web.WebPages.Deployment.xml
+D:\Lab02\WebApplication2\WebApplication2\bin\System.Web.WebPages.Razor.xml
+D:\Lab02\WebApplication2\WebApplication2\bin\Antlr3.Runtime.pdb
+D:\Lab02\WebApplication2\WebApplication2\bin\Newtonsoft.Json.xml
+D:\Lab02\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
+D:\Lab02\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
+D:\Lab02\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\WebApplication2.dll.config
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\WebApplication2.dll
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\WebApplication2.pdb
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\Antlr3.Runtime.dll
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\Newtonsoft.Json.dll
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.Helpers.dll
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.Mvc.dll
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.Optimization.dll
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.Razor.dll
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.WebPages.Deployment.dll
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.WebPages.dll
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.WebPages.Razor.dll
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\WebGrease.dll
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.Helpers.xml
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.Mvc.xml
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.Optimization.xml
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.Razor.xml
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.WebPages.xml
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.WebPages.Deployment.xml
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.WebPages.Razor.xml
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\Antlr3.Runtime.pdb
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\Newtonsoft.Json.xml
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\ArbolBinario.dll
+C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\WebApplication2\bin\ArbolBinario.pdb
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\WebApplication2.dll.config
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\WebApplication2.dll
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\WebApplication2.pdb
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\Antlr3.Runtime.dll
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\ArbolBinario.dll
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\Microsoft.Web.Infrastructure.dll
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\Newtonsoft.Json.dll
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.Helpers.dll
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.Mvc.dll
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.Optimization.dll
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.Razor.dll
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.WebPages.Deployment.dll
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.WebPages.dll
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.WebPages.Razor.dll
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\WebGrease.dll
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\ArbolBinario.pdb
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.Helpers.xml
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.Mvc.xml
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.Optimization.xml
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.Razor.xml
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.WebPages.xml
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.WebPages.Deployment.xml
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\System.Web.WebPages.Razor.xml
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\Antlr3.Runtime.pdb
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\bin\Newtonsoft.Json.xml
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
+D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb

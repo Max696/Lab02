@@ -1,8 +1,10 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using WebApplication2.Models;
+using TDA_NoLineales.Interfaces;
+using TDA_NoLineales.Clases;
 
 namespace WebApplication2.DBContext
 {
@@ -11,7 +13,11 @@ namespace WebApplication2.DBContext
         private static volatile DefaultConnection Instance;
         private static object syncRoot = new Object();
 
-        public List<Pais> Personas = new List<Pais>();
+        public ArbolBinarioBusqueda<Pais> Paises = new ArbolBinarioBusqueda<Pais>();
+        public ArbolBinarioBusqueda<int> entero = new ArbolBinarioBusqueda<int>();
+        public List<string> pai = new List<string>();
+        public ArbolBinarioBusqueda<Cadena> cadena = new ArbolBinarioBusqueda<Cadena>();
+
         public int IDActual { get; set; }
 
         private DefaultConnection()

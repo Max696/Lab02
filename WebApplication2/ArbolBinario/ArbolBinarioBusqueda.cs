@@ -8,10 +8,11 @@ using TDA_NoLineales.Clases;
 
 namespace TDA_NoLineales.Clases
 {
-    public class ArbolBinarioBusqueda<T> : IArbolBinario<T> 
+  
+    public class ArbolBinarioBusqueda<T> : IArbolBinario<T> where T:IComparable<T>
     {
 
-        private Nodo<T> _raiz;
+        public Nodo<T> _raiz { get; set; }
 
         public ArbolBinarioBusqueda() {
             _raiz = null;
@@ -24,11 +25,11 @@ namespace TDA_NoLineales.Clases
                 return null;
 
             }
-            if (actual.left == null)
+            if (actual.izquierdo == null)
             {
                 return actual;
             }
-            return Min(actual.left);
+            return Min(actual.izquierdo);
         }
         public  Nodo<T> RoveToFindMin()
         {
@@ -43,60 +44,59 @@ namespace TDA_NoLineales.Clases
             if (n == null)
             {
                 return null;
-
             }
             else
             {
-                while (n.right != null)
+                while (n.derecho != null)
                 {
-                    n = n.right;
+                    n = n.derecho;
                 }
                 return n;
             }
         }
-        public Nodo<T> DeleteWithNodea(T _key, Nodo<T> pivot)
+        public Nodo<T> DeleteWithNodea(T _key, Nodo<T> pivot) //Eliminar
         {
             if (pivot==null)
             {
                 return null;
             }
-            if (pivot.CompareTo(_key)>0)
+            if (_key.CompareTo(pivot.valor)<0)
             {
-               pivot.left= DeleteWithNodea(_key, pivot.left);
+               pivot.izquierdo= DeleteWithNodea(_key, pivot.izquierdo);
             }
-            else if (pivot.CompareTo(_key)<0)
+            else if (_key.CompareTo(pivot.valor)>0)
             {
-                pivot.right=DeleteWithNodea(_key, pivot.right);
+                pivot.derecho=DeleteWithNodea(_key, pivot.derecho);
             }
-            else if (pivot==_raiz)
+            else if (pivot == _raiz)
             {
+                rootDelete(_key, pivot);
+            }
 
-            }
-          
             else
             {
-                if( pivot.right==null && pivot.left==null)
+                if( pivot.derecho==null && pivot.izquierdo==null)
                 {
                     pivot = null;
                     return pivot;
                 }
-                else if (pivot.right == null)
+                else if (pivot.derecho == null)
                 {
                     Nodo<T> aux = pivot;
-                    pivot = pivot.left;
+                    pivot = pivot.izquierdo;
                     aux = null;
                 }
-                else if ( pivot.right==null)
+                else if ( pivot.derecho==null)
                 {
                     Nodo<T> aux = pivot;
-                    pivot = pivot.right;
+                    pivot = pivot.derecho;
                     aux = null;
                 }
                 else
                 {
-                    Nodo<T> aux = Max(pivot.left);
-                    pivot.value = aux.value;
-                    pivot.right = DeleteWithNodea(_key, pivot.left);
+                    Nodo<T> aux = Max(pivot.izquierdo);
+                    pivot.valor = aux.valor;
+                    pivot.derecho = DeleteWithNodea(_key, pivot.izquierdo);
                 }
             }
             return pivot;
@@ -109,47 +109,47 @@ namespace TDA_NoLineales.Clases
             {
                 if (root.CompareTo(_key) < 0)
                 {
-                    rootDelete(_key, root.left);
+                    rootDelete(_key, root.izquierdo);
                 }
                 else
                 {
                     if (root.CompareTo(_key) > 0)
                     {
-                        rootDelete(_key, root.right);
+                        rootDelete(_key, root.derecho);
                     }
                     else
                     {
                         Nodo<T> toDeleteNode = root;
-                        if (toDeleteNode.right == null)
+                        if (toDeleteNode.derecho == null)
                         {
-                            root = toDeleteNode.left;
+                            root = toDeleteNode.izquierdo;
                         }
                         else
                         {
-                            if (toDeleteNode.left == null)
+                            if (toDeleteNode.izquierdo == null)
                             {
-                                root = toDeleteNode.right;
+                                root = toDeleteNode.derecho;
                             }
                             else
                             {
                                 Nodo<T> pivot = null;
-                                Nodo<T> aux = root.left;
+                                Nodo<T> aux = root.izquierdo;
                                 bool mark = false;
-                                while (aux.right != null)
+                                while (aux.derecho != null)
                                 {
                                     pivot = aux;
-                                    aux = aux.right;
+                                    aux = aux.derecho;
                                     mark = true;
                                 }
-                                root.value = aux.value;
+                                root.valor = aux.valor;
                                 toDeleteNode = aux;
                                 if (mark == true)
                                 {
-                                    pivot.right = aux.left;
+                                    pivot.derecho = aux.izquierdo;
                                 }
                                 else
                                 {
-                                    root.left = aux.left;
+                                    root.izquierdo = aux.izquierdo;
                                 }
                             }
                         }
@@ -157,13 +157,13 @@ namespace TDA_NoLineales.Clases
                 }
             }
         }
-                 
-         
+
         public void EnOrden(RecorridoDelegate<T> _recorrido)
         {
             RecorridoEnOrdenInterno(_recorrido, _raiz);
         }
-
+        int right = 0;
+        int left = 0;
         public void Insertar(Nodo<T> _nuevo)
         {
             if (_raiz == null)
@@ -181,7 +181,6 @@ namespace TDA_NoLineales.Clases
             return _raiz;
         }
 
-
         public void PostOrden(RecorridoDelegate<T> _recorrido)
         {
             RecorridoPostOrdenInterno(_recorrido, _raiz);
@@ -193,44 +192,59 @@ namespace TDA_NoLineales.Clases
         }
 
         private void InsercionInterna(Nodo<T> _actual, Nodo<T> _nuevo) {
-            if (_actual.CompareTo(_nuevo.value) < 0)
+            if (_actual.CompareTo(_nuevo.valor) < 0)
             {
-                if (_actual.right == null)
+                if (_actual.derecho == null)
                 {
-                    _actual.right = _nuevo;
+                    _actual.derecho = _nuevo;
+                    right++;
                 }
                 else
                 {
-                    InsercionInterna(_actual.right, _nuevo);
+                    InsercionInterna(_actual.derecho, _nuevo);
                 }
             }
-            else if (_actual.CompareTo(_nuevo.value) > 0) {
-                if (_actual.left == null)
+            else if (_actual.CompareTo(_nuevo.valor) > 0) {
+                if (_actual.izquierdo == null)
                 {
-                    _actual.left = _nuevo;
+                    _actual.izquierdo = _nuevo;
+                    left++;
                 }
                 else 
                 {
-                    InsercionInterna(_actual.left, _nuevo);
+                    InsercionInterna(_actual.izquierdo, _nuevo);
                 }
             }
         } //Fin de inserción interna.
+        public bool Balanceado()
+        {
+            bool TOrF = false;
+            if ((left-right)==0)
+            {
+                TOrF = true;
+            }
+            else
+            {
+                TOrF = false;
+            }
+            return TOrF;
 
+        }
         private void RecorridoEnOrdenInterno(RecorridoDelegate<T> _recorrido, Nodo<T> _actual) {    
             if (_actual != null) {
-                RecorridoEnOrdenInterno(_recorrido, _actual.left);
+                RecorridoEnOrdenInterno(_recorrido, _actual.izquierdo);
 
                 _recorrido(_actual);
 
-                RecorridoEnOrdenInterno(_recorrido, _actual.right);
+                RecorridoEnOrdenInterno(_recorrido, _actual.derecho);
             }
         }
 
         private void RecorridoPostOrdenInterno(RecorridoDelegate<T> _recorrido, Nodo<T> _actual) {
             if (_actual != null) {
-                RecorridoEnOrdenInterno(_recorrido, _actual.left);
+                RecorridoEnOrdenInterno(_recorrido, _actual.izquierdo);
 
-                RecorridoEnOrdenInterno(_recorrido, _actual.right);
+                RecorridoEnOrdenInterno(_recorrido, _actual.derecho);
 
                 _recorrido(_actual);
             }
@@ -242,9 +256,9 @@ namespace TDA_NoLineales.Clases
             {
                 _recorrido(_actual);
 
-                RecorridoEnOrdenInterno(_recorrido, _actual.left);
+                RecorridoEnOrdenInterno(_recorrido, _actual.izquierdo);
 
-                RecorridoEnOrdenInterno(_recorrido, _actual.right);
+                RecorridoEnOrdenInterno(_recorrido, _actual.derecho);
             }
         }
     }
