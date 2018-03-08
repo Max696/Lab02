@@ -47,6 +47,5 @@ C:\ED\Github\Lab02\WebApplication2\WebApplication2\bin\System.Web.WebPages.Deplo
 C:\ED\Github\Lab02\WebApplication2\WebApplication2\bin\System.Web.WebPages.Razor.xml
 C:\ED\Github\Lab02\WebApplication2\WebApplication2\bin\Antlr3.Runtime.pdb
 C:\ED\Github\Lab02\WebApplication2\WebApplication2\bin\Newtonsoft.Json.xml
-C:\ED\Github\Lab02\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csprojResolveAssemblyReference.cache
 C:\ED\Github\Lab02\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
 C:\ED\Github\Lab02\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb
