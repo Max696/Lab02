@@ -70,7 +70,7 @@ namespace TDA_NoLineales.Clases
             }
             else if (pivot==_raiz)
             {
-
+                rootDelete(_key, pivot);
             }
           
             else
@@ -157,7 +157,19 @@ namespace TDA_NoLineales.Clases
                 }
             }
         }
-                 
+        public string ArbolBalanceado()
+        {
+            string trueOrFalse = "";
+            if ((left - right) == 0)
+            {
+                trueOrFalse = "Arbol balanceado";
+            }
+            else
+            {
+                trueOrFalse = "Arbol degenerado";
+            }
+            return trueOrFalse;
+        }          
          
         public void EnOrden(RecorridoDelegate<T> _recorrido)
         {
@@ -191,13 +203,15 @@ namespace TDA_NoLineales.Clases
         {
             RecorridoPreOrdenInterno(_recorrido, _raiz);
         }
-
+        int right = 0;
+        int left = 0;
         private void InsercionInterna(Nodo<T> _actual, Nodo<T> _nuevo) {
             if (_actual.CompareTo(_nuevo.value) < 0)
             {
                 if (_actual.right == null)
                 {
                     _actual.right = _nuevo;
+                    right++;
                 }
                 else
                 {
@@ -208,6 +222,7 @@ namespace TDA_NoLineales.Clases
                 if (_actual.left == null)
                 {
                     _actual.left = _nuevo;
+                    left++;
                 }
                 else 
                 {
@@ -247,5 +262,7 @@ namespace TDA_NoLineales.Clases
                 RecorridoEnOrdenInterno(_recorrido, _actual.right);
             }
         }
+
+       
     }
 }
