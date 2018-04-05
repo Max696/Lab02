@@ -7,7 +7,10 @@
 <h2>Index</h2>
 
 <p>
-        @Html.ActionLink("Create New", "Create")<br />  
-    @Html.ActionLink("Mostrar en postorden", "Post")<br />
-    @Html.ActionLink("Mostrar en preOrden", "Pre");
+    @Html.ActionLink("Create New", "Create", "Entero")<br />  
+    <span style="color:black">@ViewBag.Mostrar</span><br />
+    <span style="color:black">@ViewBag.Show</span><br />  
+    @Html.ActionLink("Mostrar postorden", "Post", "Entero")<br />
+    @Html.ActionLink("Mostrar Intorden", "In", "Entero")<br />
+    @Html.ActionLink("Mostrar preOrden", "Pre", "Entero")
 </p>

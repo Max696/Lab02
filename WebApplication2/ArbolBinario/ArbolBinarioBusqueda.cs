@@ -78,7 +78,7 @@ namespace TDA_NoLineales.Clases
                 if( pivot.derecho==null && pivot.izquierdo==null)
                 {
                     pivot = null;
-                    return pivot;
+                   
                 }
                 else if (pivot.derecho == null)
                 {
@@ -86,7 +86,7 @@ namespace TDA_NoLineales.Clases
                     pivot = pivot.izquierdo;
                     aux = null;
                 }
-                else if ( pivot.derecho==null)
+                else if ( pivot.izquierdo==null)
                 {
                     Nodo<T> aux = pivot;
                     pivot = pivot.derecho;
@@ -96,9 +96,10 @@ namespace TDA_NoLineales.Clases
                 {
                     Nodo<T> aux = Max(pivot.izquierdo);
                     pivot.valor = aux.valor;
-                    pivot.derecho = DeleteWithNodea(_key, pivot.izquierdo);
+                    pivot.izquierdo = DeleteWithNodea(aux.valor, pivot.izquierdo);
                 }
             }
+            _raiz = pivot;
             return pivot;
 
         
@@ -261,5 +262,71 @@ namespace TDA_NoLineales.Clases
                 RecorridoEnOrdenInterno(_recorrido, _actual.derecho);
             }
         }
+        public static int LH = 0 ;
+        public static int RH = 0;
+        public  int FB = RH - LH;
+        public bool EsDegenerado(Nodo<T> pivot)
+        {
+            if (pivot.izquierdo != null && pivot.derecho != null)
+            {
+                return false;
+            }
+            else if (pivot.izquierdo != null || pivot.derecho != null)
+            {
+                if (pivot.izquierdo != null)
+                    EsDegenerado(pivot.izquierdo);
+                else
+                    EsDegenerado(pivot.derecho);
+            }
+            else
+            {
+                return true;
+            }
+            return true;
+
+        }
+
+       public List<T> PreList = new List<T>();
+        public void Pre(Nodo<T> pivot)
+        {
+           
+            if(pivot!= null)
+            {
+                PreList.Add(pivot.valor);
+                Pre(pivot.izquierdo);
+                LH++;
+                Pre(pivot.derecho);
+                RH++;
+                
+            }
+         
+                
+           
+        }
+        
+        public List<T> InList = new List<T>();
+        public void In(Nodo<T>pivot)
+        {
+            if( pivot!= null)
+            {
+                In(pivot.izquierdo);
+                InList.Add(pivot.valor);
+                In(pivot.derecho);
+               
+            }
+           
+        }
+        public List<T> PostList = new List<T>();
+        public void Post(Nodo<T> pivot)
+        {
+            if (pivot!= null )
+            {
+                 Post(pivot.izquierdo);
+                 Post(pivot.derecho);
+                 PostList.Add(pivot.valor);
+            }
+           
+        }
+      
     }
 }

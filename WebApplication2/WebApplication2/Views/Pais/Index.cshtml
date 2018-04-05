@@ -8,7 +8,10 @@
 
 <p>
     @Html.ActionLink("Create New", "Create")<br />
-    @Html.ActionLink("Recorrido PostOrden", "Post");<br />
-    @Html.ActionLink("Recorrido PreOrden", "Pre");
+    <span style="color:black">@ViewBag.Mostrar</span><br />   
+    <span style="color:black">@ViewBag.Show</span><br />  
+    @Html.ActionLink("Recorrido PostOrden", "POST")<br />
+    @Html.ActionLink("Recorrido PreOrden", "Pre")<br />
+    @Html.ActionLink("Recorrido InOrden", "In")<br />
 </p>
 

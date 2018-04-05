@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,10 +14,12 @@ namespace WebApplication2.DBContext
         private static object syncRoot = new Object();
 
         public ArbolBinarioBusqueda<Pais> Paises = new ArbolBinarioBusqueda<Pais>();
+        public ArbolBinarioBusqueda<Entero> ENTEROS = new ArbolBinarioBusqueda<Entero>();
         public ArbolBinarioBusqueda<int> entero = new ArbolBinarioBusqueda<int>();
-        public List<string> pai = new List<string>();
+        
+        
         public ArbolBinarioBusqueda<Cadena> cadena = new ArbolBinarioBusqueda<Cadena>();
-
+            
         public int IDActual { get; set; }
 
         private DefaultConnection()

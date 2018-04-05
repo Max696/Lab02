@@ -7,7 +7,7 @@ using System.Collections;
 
 namespace WebApplication2.Models
 {
-    public class Entero
+    public class Entero : IComparable<Entero>
     {
         public int valor { get; set; }
 

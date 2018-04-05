@@ -112,12 +112,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CargaDeDatos\CadenaController.cs" />
+    <Compile Include="Controllers\CadenaController.cs" />
     <Compile Include="Controllers\Manual\CountryController.cs" />
-    <Compile Include="Controllers\CargaDeDatos\EnteroController.cs" />
+    <Compile Include="Controllers\EnteroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Manual\IntController.cs" />
-    <Compile Include="Controllers\CargaDeDatos\PaisController.cs" />
+    <Compile Include="Controllers\PaisController.cs" />
     <Compile Include="Controllers\Manual\StringController.cs" />
     <Compile Include="DBContext\DefaultConnection.cs" />
     <Compile Include="Global.asax.cs">
@@ -177,15 +177,19 @@
     <Content Include="Views\Manual\Country\Create.cshtml" />
     <Content Include="Views\Manual\String\Index.cshtml" />
     <Content Include="Views\Manual\String\Create.cshtml" />
-    <Content Include="Views\Entero\Post.cshtml" />
-    <Content Include="Views\Entero\Pre.cshtml" />
     <Content Include="Views\Cadena\Post.cshtml" />
     <Content Include="Views\Cadena\PRe.cshtml" />
     <Content Include="Views\Pais\Post.cshtml" />
     <Content Include="Views\Pais\Pre.cshtml" />
+    <Content Include="Views\Pais\In.cshtml" />
+    <Content Include="Views\Pais\Delete.cshtml" />
+    <Content Include="Views\Entero\Post.cshtml" />
+    <Content Include="Views\Entero\Pre.cshtml" />
+    <Content Include="Views\Entero\In.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Controllers\CargaDeDatos\" />
     <Folder Include="JSONFiles\" />
   </ItemGroup>
   <ItemGroup>

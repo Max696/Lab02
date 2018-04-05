@@ -21,6 +21,28 @@ namespace WebApplication2.Controllers
         // GET: Pais
         public ActionResult Index()
         {
+            if (db.Paises._raiz != null)
+            {
+                bool DON = false;
+                DON = db.Paises.EsDegenerado(db.Paises._raiz);
+                if (DON == true)
+                {
+                    ViewBag.Mostrar = " Es degenerado";
+                }
+                else
+                {
+                    ViewBag.Mostrar = " No es degenerado";
+                }
+                if (Math.Abs(db.ENTEROS.FB) == 1)
+                {
+                    ViewBag.Show = " Esta equilibrado";
+                }
+                else
+                {
+                    ViewBag.Show = "Esta desequilibrado";
+                }
+
+            }
             return View();
         }
 
@@ -61,7 +83,25 @@ namespace WebApplication2.Controllers
                 return View();
             }
         }
+        
+        public ActionResult POST()
+        {
+            db.Paises.Post(db.Paises._raiz);
+   
+            return View(db.Paises.PostList);
+        }
 
+        public ActionResult Pre()
+        {
+            db.Paises.Pre(db.Paises._raiz);
+            return View(db.Paises.PreList);
+        }
+
+        public ActionResult In()
+        {
+            db.Paises.In(db.Paises._raiz);
+            return View(db.Paises.InList);
+        }
         // GET: Pais/Edit/5
         public ActionResult Edit(int id)
         {
@@ -85,19 +125,28 @@ namespace WebApplication2.Controllers
         }
 
         // GET: Pais/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(Pais id)
         {
-            return View();
+            if (id == null)
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
+            Pais n = db.Paises.InList.Find(x => x.nombre == id.nombre);
+            if (n == null)
+                return Index();
+            else
+                return View(n);
         }
 
         // POST: Pais/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirm(string id, FormCollection collection)
         {
             try
             {
                 // TODO: Add delete logic here
-
+                Pais n = db.Paises.InList.Find(x => x.nombre == id);
+                db.Paises.Eliminar(n);
                 return RedirectToAction("Index");
             }
             catch

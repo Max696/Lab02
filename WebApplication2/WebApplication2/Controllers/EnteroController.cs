@@ -18,6 +18,32 @@ namespace WebApplication2.Controllers
         // GET: Entero
         public ActionResult Index()
         {
+            
+            if (db.ENTEROS._raiz!= null)
+            {
+                
+                bool DON = false;
+                DON = db.ENTEROS.EsDegenerado(db.ENTEROS._raiz);
+                
+                if (DON == true)
+                {
+                    
+                    ViewBag.Mostrar = " Es degenerado";
+                }
+                else
+                {
+                    ViewBag.Mostrar = " No es degenerado";
+                }
+
+                if (Math.Abs(db.ENTEROS.FB) == 1)
+                {
+                    ViewBag.Show = " Esta equilibrado";
+                }
+                else
+                {
+                    ViewBag.Show = "Esta desequilibrado";
+                }
+            }
             return View();
         }
 
@@ -45,7 +71,18 @@ namespace WebApplication2.Controllers
                     jsonFile.SaveAs(Server.MapPath("~/JSONFiles" + Path.GetFileName(jsonFile.FileName)));
                     StreamReader sr = new StreamReader(Server.MapPath("~/JSONFiles" + Path.GetFileName(jsonFile.FileName)));
                     string data = sr.ReadToEnd();
-                    db.entero._raiz = JsonConvert.DeserializeObject<Nodo<int>>(data);
+                     ArbolBinarioBusqueda<int> entero = new ArbolBinarioBusqueda<int>();
+                    entero._raiz= JsonConvert.DeserializeObject<Nodo<int>>(data);
+                    entero.Pre(entero._raiz);
+                    List<int> aux = entero.PreList;
+                    for (int i = 0; i < aux.Count; i++)
+                    {
+                        Entero e = new Entero();
+                        e.valor = aux[i];
+                        Nodo<Entero> nodo = new Nodo<Entero>(e, CompararEntero);
+                        db.ENTEROS.Insertar(nodo);
+                    }
+                   
                 }
                 else
                 {
@@ -101,6 +138,29 @@ namespace WebApplication2.Controllers
             {
                 return View();
             }
+        }
+        public ActionResult Post()
+        {
+            db.ENTEROS.Post(db.ENTEROS._raiz);
+      
+            return View(db.ENTEROS.PostList);
+        }
+        public ActionResult Pre()
+        {
+            db.ENTEROS.Pre(db.ENTEROS._raiz);
+
+            return View(db.ENTEROS.PreList);
+        }
+
+        public ActionResult In()
+        {
+            db.ENTEROS.In(db.ENTEROS._raiz);
+            return View(db.ENTEROS.InList);
+        }
+
+        public static int CompararEntero(Entero _actual, Entero _nuevo)
+        {
+            return _actual.valor.CompareTo(_nuevo.valor);
         }
     }
 }

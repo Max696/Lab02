@@ -1,8 +1,3 @@
-D:\Lab02\WebApplication2\ArbolBinario\bin\Debug\ArbolBinario.dll
-D:\Lab02\WebApplication2\ArbolBinario\bin\Debug\ArbolBinario.pdb
-D:\Lab02\WebApplication2\ArbolBinario\obj\Debug\ArbolBinario.csprojResolveAssemblyReference.cache
-D:\Lab02\WebApplication2\ArbolBinario\obj\Debug\ArbolBinario.dll
-D:\Lab02\WebApplication2\ArbolBinario\obj\Debug\ArbolBinario.pdb
 C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\ArbolBinario\bin\Debug\ArbolBinario.dll
 C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\ArbolBinario\bin\Debug\ArbolBinario.pdb
 C:\Users\lam_m\OneDrive\ED\Lab02-Lectura\WebApplication2\ArbolBinario\obj\Debug\ArbolBinario.dll
@@ -11,3 +6,8 @@ D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\ArbolBinario\bin\Debug\Arbol
 D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\ArbolBinario\bin\Debug\ArbolBinario.pdb
 D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\ArbolBinario\obj\Debug\ArbolBinario.dll
 D:\U\1 er 2018\ED\Mex\Lab02-Lectura\WebApplication2\ArbolBinario\obj\Debug\ArbolBinario.pdb
+D:\Lab02\WebApplication2\ArbolBinario\bin\Debug\ArbolBinario.dll
+D:\Lab02\WebApplication2\ArbolBinario\bin\Debug\ArbolBinario.pdb
+D:\Lab02\WebApplication2\ArbolBinario\obj\Debug\ArbolBinario.dll
+D:\Lab02\WebApplication2\ArbolBinario\obj\Debug\ArbolBinario.pdb
+D:\Lab02\WebApplication2\ArbolBinario\obj\Debug\ArbolBinario.csprojResolveAssemblyReference.cache
